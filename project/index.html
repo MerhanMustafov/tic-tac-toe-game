@@ -12,7 +12,7 @@
   <body  onload="game()">
     
     <h1>Tic-Tac-Toe</h1>
-    <table>
+    <table id="board">
       <tr>
         <td id="cell-1"></td>
         <td id="cell-2"></td>
@@ -30,6 +30,21 @@
         <td id="cell-9"></td>
       </tr>
     </table>
+    <table id=stats>
+        <thead>
+            <tr>
+                <th><div id="pl-1">You: 0</div></th>
+                <th><div id="pl-2">Bot: 0</div></th>
+            </tr>
+        </thead>
+        <!-- <tbody>
+            <tr>
+                <td><div id="total">Result: 0:0</div></td>
+            </tr>
+        </tbody> -->
+        
+    </table>
+
     <!-- type="module" is nesessery so to be able to import from other files/modules -->
     <script type="module" src="./script.js" ></script> 
   </body>

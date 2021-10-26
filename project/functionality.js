@@ -1,19 +1,51 @@
-function placeMarkInBox(event, player){
-    let div = document.createElement('div')
+export {setTheField, placeMarkInBox, isThereWinner, upgaradeResult}
+import { horizontalCheck, verticalCheck, diagonalCheck} from "./algorithm.js";
 
-    div.style = 'text-align: center; font-size: 100px'
-    div.textContent = player % 2 == 0 ? 'X' : "O"
+function setTheField(){
+    Array.from(document.querySelectorAll('td')).forEach(cell => {
+        let div = document.createElement('div')
+        div.style = 'text-align: center; font-size: 100px', div.setAttribute('class','cell'), div.textContent = ''
+        cell.appendChild(div)
+    })
+}
 
-    event.appendChild(div)
+function placeMarkInBox(event, player, divs){
+    let index;
+    if ( player % 2 == 0){
+        let cell = event.firstElementChild
+        index = divs.indexOf(cell)
+        cell.textContent = "X"
+        divs.splice(index, 1)
+    }else{
+        let cell = divs[Math.floor(Math.random() * divs.length)]
+        index = divs.indexOf(cell)
+        cell.textContent = "O"
+        divs.splice(index, 1)
+    }
+    
+}
+
+function isThereWinner(player){
+
+    if (horizontalCheck(player)){
+        return true
+    }
+    if (verticalCheck(player)){
+        return true
+    }
+    if (diagonalCheck(player)){
+        return true
+    }
 
 }
 
-function isWinner(){
-    // let [a, b, c]=[...document.querySelectorAll('table tr')].map(tr => Array.from(tr.children))
-    // console.log(a)
-    let field = [[], [], []]=[...document.querySelectorAll('table tr')].map(tr => Array.from(tr.children))
-    // console.log(field)
-
+function upgaradeResult(player){
+    let pl = player == "X" ? "#pl-1" : "#pl-2"
+    let total = document.querySelector(pl).textContent.split(": ")
+    total[1] = Number(total[1]) + 1
+    
+    document.querySelector(pl).textContent = total.join(": ")
 }
 
-export {placeMarkInBox, isWinner}
+
+
