@@ -8,21 +8,22 @@ window.game = game
 
 function game(){
     setTheField()
-    
+    let divs = Array.from(document.querySelectorAll('div[class="cell"]'))
     let player = 0
     let winner = false
+    
     
    
     let delegation = document.querySelector('body')
     delegation.addEventListener("click", onclick)
 
     function onclick(e){
-        let divs = Array.from(document.querySelectorAll('div[class="cell"]'))
+        
         
         // console.log(e.target)
         if (e.target.localName == 'td' && winner==false){
-            let empty = e.target.style.background == ''
-            if (player % 2 == 0 && empty){
+            let empty = e.target.style.background
+            if (player % 2 == 0 && empty==''){
                 placeMarkInBox(e.target, player , divs)
                 if (isThereWinner("X")){
                     upgaradeResult("X")
@@ -31,10 +32,7 @@ function game(){
                     
                 }else{
                     player += 1
-                }   
-                
-                //divs.length > 1 && 
-            }if (player % 2 !== 0){
+                }
                 placeMarkInBox("", player, divs)
                 if (isThereWinner("O")){
                     upgaradeResult("O")
@@ -43,12 +41,17 @@ function game(){
                    
                 } else{
                     player += 1
-                }   
+                }      
+
+                //divs.length > 1 && 
             }
+               
+            
             
         } else if (e.target.id == "resetBtn"){
             clearBoard()
             winner = false
+            divs = Array.from(document.querySelectorAll('div[class="cell"]'))
         }
     }        
 }

@@ -16,7 +16,7 @@ function placeMarkInBox(event, player, divs){
         index = divs.indexOf(cell)
         cell.textContent = "X"
         divs.splice(index, 1)
-    }else{
+    }else if(player % 2 !== 0){
         let cell = divs[Math.floor(Math.random() * divs.length)]
         index = divs.indexOf(cell)
         cell.textContent = "O"
@@ -39,19 +39,13 @@ function isThereWinner(player){
 
 }
 
-function upgaradeResult(player, winner){
+function upgaradeResult(player){
     let pl = player == "X" ? "#pl-1" : "#pl-2"
     let total = document.querySelector(pl).textContent.split(": ")
     total[1] = Number(total[1]) + 1
     
     document.querySelector(pl).textContent = total.join(": ")
-    winner = true
-    // let fieldset = document.querySelector('fieldset')
-    // fieldset.style = 'pointer-events: "none"';
-//     console.log(fieldset)
-//     console.log(fieldset.disabled)
-//     fieldset.disabled = true
-//     console.log(fieldset)
+
 }
 
 function clearBoard(){
