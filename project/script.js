@@ -29,15 +29,18 @@ function game(){
                     upgaradeResult("X")
                     winner = true
                     player = 0
+                    return
                     
                 }else{
                     player += 1
                 }
-                placeMarkInBox("", player, divs)
+                setTimeout(placeMarkInBox, 1000, '', player, divs)
+                // placeMarkInBox("", player, divs)
                 if (isThereWinner("O")){
                     upgaradeResult("O")
                     winner = true
                     player = 0
+                    return
                    
                 } else{
                     player += 1

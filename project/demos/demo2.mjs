@@ -1,8 +1,21 @@
-function multiply(num){
-    return num * 5
-}
+// setTimeout(buy, 3000)
+// console.log('hello')
 
-export {multiply}
+// function buy(){
+//     console.log('goodbuy')
+// }
+
+// buy()
+
+
+// setTimeout(multiply, 3)
+// function multiply(){
+//     console.log(50)
+// }
+
+// multiply()
+
+// export {multiply}
 
 
 // function random_item(items)
@@ -21,10 +34,10 @@ export {multiply}
 //     console.log(randomNum)
 //     items.splice(index, 1)
 // }
-let first = [1, 2, 3]
-console.log(Math.ceil())
-console.log(first[Math.ceil(Math.random() * first.length-1)])
-console.log(first[Math.floor(Math.random() * first.length)])
+// let first = [1, 2, 3]
+// console.log(Math.ceil())
+// console.log(first[Math.ceil(Math.random() * first.length-1)])
+// console.log(first[Math.floor(Math.random() * first.length)])
 // console.log(first[Math.floor(Math.random())])
 
 // Math.random() * first.length
