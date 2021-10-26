@@ -31,7 +31,7 @@ function verticalCheck(player){
             console.log('You are winner')
             return true
         }
-        else if (board[2].textContent !== "" && (board[2].textContent == mark && board[5].textContent == mark && board[9].textContent == mark )){
+        else if (board[2].textContent !== "" && (board[2].textContent == mark && board[5].textContent == mark && board[8].textContent == mark )){
             console.log('You are winner')
             return true
         }
