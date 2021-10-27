@@ -11,6 +11,8 @@ function game(){
     let divs = Array.from(document.querySelectorAll('div[class="cell"]'))
     let player = 0
     let winner = false
+    let wait = false
+    let draw = false
     
     
    
@@ -21,39 +23,59 @@ function game(){
         
         
         // console.log(e.target)
-        if (e.target.localName == 'td' && winner==false){
+        if (e.target.localName == 'td' && winner == false && wait == false && draw==false){
             let empty = e.target.style.background
-            if (player % 2 == 0 && empty==''){
-                placeMarkInBox(e.target, player , divs)
-                if (isThereWinner("X")){
-                    upgaradeResult("X")
-                    winner = true
-                    player = 0
-                    return
-                    
-                }else{
-                    player += 1
-                }
-                setTimeout(placeMarkInBox, 1000, '', player, divs)
-                // placeMarkInBox("", player, divs)
-                if (isThereWinner("O")){
-                    upgaradeResult("O")
-                    winner = true
-                    player = 0
-                    return
-                   
-                } else{
-                    player += 1
-                }      
+            while(divs.length > 0){
+                if (player % 2 == 0 && empty==''){
+                    placeMarkInBox(e.target, player , divs)
+                    if (isThereWinner("X")){
+                        upgaradeResult("X")
+                        winner = true
+                        player = 0
+                        return
+                        
+                    }
+                    if (divs.length == 0){
+                        draw = true
+                        upgaradeResult('', draw)
+                        winner = true
+                        player = 0
+                        return
+                        
+                    }
+                    wait = true
+                    setTimeout(function(){
+                        player += 1
+                        placeMarkInBox('', player, divs)
+                        if (isThereWinner("O")){
+                            upgaradeResult("O")
+                            winner = true
+                            wait = false
+                            player = 0
+                            return
+                        }
+                        if (divs.length == 0){
+                            draw = true
+                            upgaradeResult('', draw)
+                            winner = true
+                            player = 0
+                            return
+                            
+                        }    
+                        player += 1
+                        wait = false
+                        // console.log("remain board: ",divs)
+                    }, 999)
+                    break 
 
-                //divs.length > 1 && 
             }
-               
-            
-            
+
+        }
+                      
         } else if (e.target.id == "resetBtn"){
             clearBoard()
             winner = false
+            draw = false
             divs = Array.from(document.querySelectorAll('div[class="cell"]'))
         }
     }        

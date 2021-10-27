@@ -98,6 +98,16 @@ td:hover{
     border-width: 3px;
     
 }
+#draws {
+    font-size: 50px;
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 70px;
+    top: 0;
+    left: 0;
+    border-width: 3px;
+    
+}
 
 #resetBtn{
     display: block;

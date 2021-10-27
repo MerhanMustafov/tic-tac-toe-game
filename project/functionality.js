@@ -16,11 +16,14 @@ function placeMarkInBox(event, player, divs){
         index = divs.indexOf(cell)
         cell.textContent = "X"
         divs.splice(index, 1)
-    }else if(player % 2 !== 0){
+        
+    }else if(player % 2 !== 0 ){
         let cell = divs[Math.floor(Math.random() * divs.length)]
         index = divs.indexOf(cell)
         cell.textContent = "O"
         divs.splice(index, 1)
+     
+        
     }
     
 }
@@ -39,7 +42,13 @@ function isThereWinner(player){
 
 }
 
-function upgaradeResult(player){
+function upgaradeResult(player, draw = false){
+    if (draw){
+        let total = document.querySelector('#draws').textContent.split(": ")
+        total[1] = Number(total[1]) + 1
+        document.querySelector('#draws').textContent = total.join(': ')
+        return
+    }
     let pl = player == "X" ? "#pl-1" : "#pl-2"
     let total = document.querySelector(pl).textContent.split(": ")
     total[1] = Number(total[1]) + 1
