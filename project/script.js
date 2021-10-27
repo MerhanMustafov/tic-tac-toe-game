@@ -13,15 +13,14 @@ function game(){
     let curPlMove = 0; // current player move
     let myMark;
 
-    // let [gameWinner = false, wait = false, gameDraw = false]
     let gameWinner = false; let wait = false; let gameDraw = false;
     
     
-   
     document.querySelector('body').addEventListener("click", onclick) // delegation >>> eventlistener on the body tag
     // delegation.addEventListener("click", onclick)
 
     function onclick(e){
+        e.preventDefault()
         if (wait == true ){
             return
         }
@@ -42,7 +41,7 @@ function game(){
                         upgradeResult(myMark, gameDraw, curPlMove)
                         gameWinner = true
                         curPlMove = 0
-                        myMark = undefined;
+                        // myMark = undefined;
                         return
                         
                     }
@@ -51,7 +50,7 @@ function game(){
                         gameDraw = true
                         upgradeResult('', gameDraw)
                         curPlMove = 0
-                        myMark = undefined;
+                        // myMark = undefined;
                         return
                         
                     }
@@ -68,7 +67,7 @@ function game(){
                             gameWinner = true
                             wait = false
                             curPlMove = 0
-                            myMark = undefined;
+                            // myMark = undefined;
                             return
                         }
                         if (gameFieldCells.length == 0){
@@ -76,7 +75,7 @@ function game(){
                             upgradeResult('', gameDraw)
                             gameWinner = true
                             curPlMove = 0
-                            myMark = undefined;
+                            // myMark = undefined;
                             return
                             
                         }    
@@ -96,12 +95,24 @@ function game(){
             clearBoard()
             gameWinner = false;
             gameDraw = false;
-            myMark = undefined;
+            // myMark = undefined;
 
             gameFieldCells = Array.from(document.querySelectorAll('div[class="cell"]'))
 
         }else if (e.target.id == 'nought' || e.target.id == 'cross' && myMark == undefined){
             myMark = e.target.id == 'nought' ? 'O' : 'X'
+            
+        }else if (e.target.id == 'setMyName'){
+            let name = document.querySelector('#pl-1').textContent.split(': ')
+            let entryName = document.querySelector('#name').value.length
+            if (entryName > 8 || entryName == 0){
+                alert('Name must be less then or equal to 8 and more than 0 characters')
+                document.querySelector('#name').value = ''
+                return
+            }
+            name[0] = document.querySelector('#name').value
+            document.querySelector('#pl-1').textContent = name.join(': ')
+            document.querySelector('#name').value = ''
             
         }
     }        
