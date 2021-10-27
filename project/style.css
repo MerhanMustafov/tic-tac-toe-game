@@ -1,6 +1,10 @@
 h1 {
     text-align: center;
     font-size: 40px;
+    color:rgb(55, 55, 55);
+}
+body{
+    background-color:rgb(235, 231, 231);
 }
 #cell-1 {
     border-bottom: solid;
@@ -85,6 +89,7 @@ td:hover{
     margin-left: 70px;
     top: 0;
     left: 0;
+    color:rgb(55, 55, 55);
     
 }
 
@@ -96,6 +101,7 @@ td:hover{
     top: 0;
     left: 0;
     border-width: 3px;
+    color:rgb(55, 55, 55);
     
 }
 #draws {
@@ -106,23 +112,56 @@ td:hover{
     top: 0;
     left: 0;
     border-width: 3px;
+    color:rgb(55, 55, 55);
     
 }
 
 #resetBtn{
+    font-size: 70px;
+    position: absolute;
     display: block;
-    width: 25%;
-    height: 230px;
-    border: 10px;
+    margin-top: 370px;
+    margin-right: 70px;
+    top: 0;
+    right: 0;
+    width: 17%;
+    height: 100px;
+    border-radius: 40px;
+    font-size:85px;
     background-color: #04AA6D;
-    padding: 14px 28px;
-    font-size: 80px;
     cursor: pointer;
     text-align: center;
-    margin: auto;
-    color:rgb(34, 21, 21);
+    color:rgb(55, 55, 55);
 }
 
+#nought {
+    font-size: 50px;
+    position: absolute;
+    margin-top: 150px;
+    margin-right: 70px;
+    top: 0;
+    right: 0;
+    width: 17%;
+    height: 100px;
+    border-radius: 40px;
+    font-size:72px;
+    background-color: #04AA6D;
+    color:rgb(55, 55, 55);
+}
+#cross {
+    font-size: 10px;
+    position: absolute;
+    margin-top: 260px;
+    margin-right: 70px;
+    top: 0;
+    right: 0;
+    width: 17%;
+    height: 100px;
+    border-radius: 40px;
+    font-size:85px;
+    background-color: #04AA6D;
+    color:rgb(55, 55, 55);
+}
 
 
 

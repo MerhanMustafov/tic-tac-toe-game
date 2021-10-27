@@ -9,13 +9,14 @@
 
 
 // setTimeout(multiply, 3)
-// function multiply(){
-//     console.log(50)
-// }
 
-// multiply()
+function multiply(){
+    console.log(50)
+}
 
-// export {multiply}
+multiply()
+
+export {multiply}
 
 
 // function random_item(items)

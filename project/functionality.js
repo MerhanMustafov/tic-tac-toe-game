@@ -1,4 +1,5 @@
-export {setTheField, placeMarkInBox, isThereWinner, upgaradeResult, clearBoard}
+
+export {setTheField, placeMarkInBox, isThereWinner, upgradeResult, clearBoard}
 import { horizontalCheck, verticalCheck, diagonalCheck} from "./algorithm.js";
 
 function setTheField(){
@@ -9,21 +10,19 @@ function setTheField(){
     })
 }
 
-function placeMarkInBox(event, player, divs){
+function placeMarkInBox(clickedCell, curPlMove, field, mark){
     let index;
-    if ( player % 2 == 0){
-        let cell = event.firstElementChild
-        index = divs.indexOf(cell)
-        cell.textContent = "X"
-        divs.splice(index, 1)
+    if ( curPlMove % 2 == 0){
+        let cell = clickedCell.firstElementChild
+        index = field.indexOf(cell)
+        cell.textContent = mark
+        field.splice(index, 1)
         
-    }else if(player % 2 !== 0 ){
-        let cell = divs[Math.floor(Math.random() * divs.length)]
-        index = divs.indexOf(cell)
-        cell.textContent = "O"
-        divs.splice(index, 1)
-     
-        
+    }else if(curPlMove % 2 !== 0 ){
+        let cell = field[Math.floor(Math.random() * field.length)]
+        index = field.indexOf(cell)
+        cell.textContent = mark
+        field.splice(index, 1)
     }
     
 }
@@ -42,14 +41,20 @@ function isThereWinner(player){
 
 }
 
-function upgaradeResult(player, draw = false){
+function upgradeResult(mark, draw = false, move){
     if (draw){
         let total = document.querySelector('#draws').textContent.split(": ")
         total[1] = Number(total[1]) + 1
         document.querySelector('#draws').textContent = total.join(': ')
         return
     }
-    let pl = player == "X" ? "#pl-1" : "#pl-2"
+    let pl;
+    if (move % 2 == 0){
+        pl = mark == "X" || 'O' ? "#pl-1" : "#pl-1"
+    }else{
+        pl = '#pl-2'
+    }
+   
     let total = document.querySelector(pl).textContent.split(": ")
     total[1] = Number(total[1]) + 1
     
