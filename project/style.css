@@ -1,16 +1,22 @@
 h1 {
+    position: absolute;
+    top:20px;
+    left: 40%;
     text-align: center;
-    font-size: 40px;
+    font-size: 70px;
     color:rgb(55, 55, 55);
 }
 body{
     background-color:rgb(235, 231, 231);
 }
 fieldset{
+    position: absolute;
+    top: 200px;
+    width: 96%;
+    height: 450px;
     border-radius: 50px;
     border-width: 3px;
     border-color: #04AA6D;
-    height: 450px 
 }
 #cell-1 {
     border-bottom: solid;
@@ -89,10 +95,10 @@ td:hover{
     margin-right: auto;
 }
 #pl-1 {
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    margin-top: 150px;
-    margin-left: 70px;
+    margin-top: 10%;
+    margin-left: 5%;
     top: 0;
     left: 0;
     color:rgb(55, 55, 55);
@@ -100,10 +106,10 @@ td:hover{
 }
 
 #pl-2 {
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    margin-top: 250px;
-    margin-left: 70px;
+    margin-top: 15%;
+    margin-left: 5%;
     top: 0;
     left: 0;
     border-width: 3px;
@@ -111,10 +117,10 @@ td:hover{
     
 }
 #draws {
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    margin-top: 350px;
-    margin-left: 70px;
+    margin-top: 20%;
+    margin-left: 5%;
     top: 0;
     left: 0;
     border-width: 3px;
@@ -123,18 +129,14 @@ td:hover{
 }
 
 #resetBtn{
-    font-size: 70px;
+    font-size: 60px;
     position: absolute;
     display: block;
-    margin-top: 370px;
-    margin-right: 70px;
-    top: 0;
-    right: 0;
+    top: 67%;
+    right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
-    font-size:85px;
-    /* background-color: #04AA6D; */
     border-color: #04AA6D;
     border-width: 4px;
     cursor: pointer;
@@ -143,39 +145,34 @@ td:hover{
 }
 
 #nought {
-    font-size: 50px;
+    font-size: 57px;
     position: absolute;
-    margin-top: 150px;
-    margin-right: 70px;
-    top: 0;
-    right: 0;
+    top: 30%;
+    right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
-    font-size:72px;
-    /* background-color: #04AA6D; */
     border-color: #04AA6D;
     border-width: 4px;
     color:rgb(55, 55, 55);
 }
 #cross {
-    font-size: 10px;
+    font-size:65px;
     position: absolute;
-    margin-top: 260px;
-    margin-right: 70px;
-    top: 0;
-    right: 0;
+    top: 350px;
+    right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
-    font-size:85px;
-    /* background-color: #04AA6D; */
     border-color: #04AA6D;
     border-width: 4px;
     color:rgb(55, 55, 55);
 }
+#nameArea #name {
+    display: block;
+}
 
-#nameArea {
+/* #nameArea {
     display: block;
     font-size: 30px;
     position: absolute;
@@ -183,21 +180,28 @@ td:hover{
     left: 0;
     margin-top:30px;
     
-}
+} */
 #name{
+    position: absolute;
+    margin-top: 2.2%;
+    left: 0;
     background-color:rgb(235, 231, 231);
     border-radius: 40px;
-    width: 250px;
+    width: 20%;
     height: 40px; 
     border-color: #04AA6D;
     border-width: 3px;
     font-size: 20px;
-    margin-left: 20px;
+    
+    margin-left: 40px;
 }
 
 #setMyName{
+    position: absolute;
+    margin-top: 5.6%;
+    margin-left: 3%;
     font-size:20px;
-    width: 145px;
+    width: 20%;
     text-align: center;
     background-color:rgb(235, 231, 231);
     border-radius: 40px;
