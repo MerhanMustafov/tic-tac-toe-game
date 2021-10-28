@@ -1,3 +1,5 @@
+/* @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css"); */
+
 h1 {
     position: absolute;
     top:20px;
@@ -8,6 +10,7 @@ h1 {
 }
 body{
     background-color:rgb(235, 231, 231);
+    zoom: auto;
 }
 fieldset{
     position: absolute;
@@ -17,6 +20,10 @@ fieldset{
     border-radius: 50px;
     border-width: 3px;
     border-color: #04AA6D;
+    padding-top: 10px;
+    /* outline-style: solid;
+    outline-color:#04AA6D;
+    outline-width: 3px; */
 }
 #cell-1 {
     border-bottom: solid;
@@ -132,13 +139,13 @@ td:hover{
     font-size: 60px;
     position: absolute;
     display: block;
-    top: 67%;
+    top: 60%;
     right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
     border-color: #04AA6D;
-    border-width: 4px;
+    border-width: 3px;
     cursor: pointer;
     text-align: center;
     color:rgb(55, 55, 55);
@@ -147,25 +154,25 @@ td:hover{
 #nought {
     font-size: 57px;
     position: absolute;
-    top: 30%;
+    top: 10%;
     right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
     border-color: #04AA6D;
-    border-width: 4px;
+    border-width: 3px;
     color:rgb(55, 55, 55);
 }
 #cross {
     font-size:65px;
     position: absolute;
-    top: 350px;
+    top: 35%;
     right: 10%;
     width: 17%;
     height: 100px;
     border-radius: 40px;
     border-color: #04AA6D;
-    border-width: 4px;
+    border-width: 3px;
     color:rgb(55, 55, 55);
 }
 #nameArea #name {
