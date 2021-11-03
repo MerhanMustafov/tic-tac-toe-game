@@ -1,30 +1,28 @@
-/* @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css"); */
 
+#content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1260px;
+}
 h1 {
-    position: absolute;
-    top:20px;
-    left: 40%;
+    
     text-align: center;
     font-size: 70px;
     color:rgb(55, 55, 55);
 }
-body{
-    background-color:rgb(235, 231, 231);
-    zoom: auto;
-}
 fieldset{
-    position: absolute;
-    top: 200px;
-    width: 96%;
-    height: 450px;
-    border-radius: 50px;
-    border-width: 3px;
-    border-color: #04AA6D;
-    padding-top: 10px;
-    /* outline-style: solid;
-    outline-color:#04AA6D;
-    outline-width: 3px; */
+    height: 490px;
+    width: 1200px;
+    border-radius: 20px;
+    border-width: 5px;
 }
+#board {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 #cell-1 {
     border-bottom: solid;
     border-right: solid;
@@ -97,124 +95,78 @@ td:hover{
     border-width: 5px;
 }
 
-#board {
-    margin-left: auto;
-    margin-right: auto;
-}
 #pl-1 {
-    font-size: 40px;
     position: absolute;
-    margin-top: 10%;
-    margin-left: 5%;
-    top: 0;
-    left: 0;
-    color:rgb(55, 55, 55);
+    margin-top:190px;
+    margin-left:30px;
+    font-size:50px;
+    border-radius: 20px;
     
 }
 
 #pl-2 {
-    font-size: 40px;
     position: absolute;
-    margin-top: 15%;
-    margin-left: 5%;
-    top: 0;
-    left: 0;
-    border-width: 3px;
-    color:rgb(55, 55, 55);
+    margin-top:270px;
+    margin-left:39px;
+    font-size:50px;
+    border-radius: 20px
     
 }
 #draws {
-    font-size: 40px;
     position: absolute;
-    margin-top: 20%;
-    margin-left: 5%;
-    top: 0;
-    left: 0;
-    border-width: 3px;
-    color:rgb(55, 55, 55);
+    margin-top:350px;
+    margin-left:39px;
+    font-size:50px;
+    border-radius: 20px
     
 }
 
-#resetBtn{
-    font-size: 60px;
-    position: absolute;
-    display: block;
-    top: 60%;
-    right: 10%;
-    width: 17%;
-    height: 100px;
-    border-radius: 40px;
-    border-color: #04AA6D;
-    border-width: 3px;
-    cursor: pointer;
-    text-align: center;
-    color:rgb(55, 55, 55);
-}
-
-#nought {
-    font-size: 57px;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    width: 17%;
-    height: 100px;
-    border-radius: 40px;
-    border-color: #04AA6D;
-    border-width: 3px;
-    color:rgb(55, 55, 55);
-}
-#cross {
-    font-size:65px;
-    position: absolute;
-    top: 35%;
-    right: 10%;
-    width: 17%;
-    height: 100px;
-    border-radius: 40px;
-    border-color: #04AA6D;
-    border-width: 3px;
-    color:rgb(55, 55, 55);
-}
-#nameArea #name {
-    display: block;
-}
-
-/* #nameArea {
-    display: block;
-    font-size: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top:30px;
-    
-} */
 #name{
     position: absolute;
-    margin-top: 2.2%;
-    left: 0;
-    background-color:rgb(235, 231, 231);
-    border-radius: 40px;
-    width: 20%;
-    height: 40px; 
-    border-color: #04AA6D;
-    border-width: 3px;
-    font-size: 20px;
-    
-    margin-left: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 340px;
+    font-size: 40px;
+    border-radius: 20px;
 }
 
 #setMyName{
     position: absolute;
-    margin-top: 5.6%;
-    margin-left: 3%;
-    font-size:20px;
-    width: 20%;
-    text-align: center;
-    background-color:rgb(235, 231, 231);
-    border-radius: 40px;
-    border-color: #04AA6D;
+    margin-top: 90px;
+    margin-left: 30px; 
+    font-size: 30px;
+    border-radius: 20px;
 
 }
 
+#resetBtn{
+    position: absolute;
+    margin-top:260px;
+    margin-left: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size:40px;
+    border-radius: 20px;
+    
+}
 
-
+#nought{
+    position: absolute;
+    margin-top:100px;
+    margin-left: 900px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size:40px;
+    border-radius: 20px;
+    
+}
+#cross{
+    position: absolute;
+    margin-top:180px;
+    margin-left: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size:40px;
+    border-radius: 20px;
+    
+}

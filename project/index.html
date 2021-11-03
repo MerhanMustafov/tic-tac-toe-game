@@ -10,56 +10,63 @@
     
   </head>
   <body  onload="game()">
-    
-    <h1>Tic-Tac-Toe</h1>
-    
-    
-    <fieldset >
-      <form id="nameArea">
-        <!-- <label for="n">Enter your name</label> -->
-        <input type="text" id="name" placeholder="Enter your name">
-        <button id="setMyName">Set my name
-        </button>
-      </form>
+    <div id="content">
+      <h1>Tic-Tac-Toe</h1>
       
+      <!-- <section id="btns">
+        <button type="button" id="resetBtn" class="button">Reset</button>
+        <button type="button" id="nought" class="button">Nought</button>
+        <button type="button" id="cross" class="button">Cross</button>
+      </section> -->
+      <fieldset>
+        
+        <input type="text" id="name" placeholder="Enter your name">
+        <button id="setMyName">Set my name</button>
+
+        <div id="pl-1">You: 0</div>
+        <div id="pl-2">Bot: 0</div>
+        <div id="draws">Draws: 0</div>
+        
         <table id="board">
-            <tr>
-              <td id="cell-1"></td>
-              <td id="cell-2"></td>
-              <td id="cell-3"></td>
-            </tr>
-            <tr>
-              <td id="cell-4"></td>
-              <td id="cell-5" >
-              </td>
-              <td id="cell-6"></td>
-            </tr>
-            <tr>
-              <td id="cell-7"></td>
-              <td id="cell-8"></td>
-              <td id="cell-9"></td>
-            </tr>
-          </table>
-          <table id=stats>
-              <thead>
-                  <tr>
-                      <th><div id="pl-1">You: 0</div></th>
-                      <th><div id="pl-2">Bot: 0</div></th>
-                      <th><div id="draws">Draws: 0</div></th>
-                  </tr>
-              </thead>
-              <!-- <tbody>
-                  <tr>
-                      <td><div id="total">Result: 0:0</div></td>
-                  </tr>
-              </tbody> -->
-              
-          </table>
-          <button type="button" id="resetBtn">Reset</button>
-          <button type="button" id="nought">Nought</button>
-          <button type="button" id="cross">Cross</button>
-    </fieldset>
+            <button type="button" id="resetBtn" class="button">Reset</button>
+            <button type="button" id="nought" class="button">Nought</button>
+            <button type="button" id="cross" class="button">Cross</button>
+            
+              <tr>
+                <td id="cell-1"></td>
+                <td id="cell-2"></td>
+                <td id="cell-3"></td>
+              </tr>
+              <tr>
+                <td id="cell-4"></td>
+                <td id="cell-5" >
+                </td>
+                <td id="cell-6"></td>
+              </tr>
+              <tr>
+                <td id="cell-7"></td>
+                <td id="cell-8"></td>
+                <td id="cell-9"></td>
+              </tr>
+            </table>
+            <!-- <table id=stats> -->
+                <!-- <thead> -->
+                    <!-- <tr> -->
+                        <!-- <th><div id="pl-1">You: 0</div></th>
+                        <th><div id="pl-2">Bot: 0</div></th>
+                        <th><div id="draws">Draws: 0</div></th> -->
+                    <!-- </tr> -->
+                <!-- </thead> -->
+            
+        </fieldset>
+             
+      
+    </div>
     
+    
+    
+    
+   
     
 
     <!-- type="module" is nesessery so to be able to import from other files/modules -->

@@ -11,8 +11,8 @@
 // setTimeout(multiply, 3)
 
 function multiply(){
-    console.log(50)
 }
+console.log(50)
 
 multiply()
 
